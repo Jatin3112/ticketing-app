@@ -18,7 +18,7 @@ export default function CreateTicketForm({ onTicketCreated }) {
           Authorization: `Bearer ${token}`,
         },
       });
-      setMessage("Ticket created!");
+      setMessage("Ticket created, please navigate to All Tickets section!");
       setFormData({ title: "", description: "" });
 
       // notify dashboard to re-render
