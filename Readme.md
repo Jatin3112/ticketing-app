@@ -83,10 +83,9 @@ cd frontend && npm run dev
 ## 📬 Email‑to‑Ticket Webhook
 
 1. **Expose** `POST /api/email-webhook`
-2. **Secure** with `X-Webhook-Token` or provider signature
-3. **Parse** payload: `{ from, subject, text }`
-4. **Lookup/Create** user by `from` address
-5. **Create** ticket in DB via Prisma
+2. **Parse** payload: `{ from, subject, text }`
+3. **Lookup/Create** user by `from` address
+4. **Create** ticket in DB via Prisma
 
 ```js
 await prisma.ticket.create({
@@ -120,8 +119,30 @@ await prisma.ticket.create({
 - `GET /api/users/me`
 - `PATCH /api/users/:id/role`
 
-### Webhook
+Sure! Here's a concise section you can include in your **global `README.md`** to describe the Email-to-Ticket feature and point to the backend for details:
 
-- `POST /api/email-webhook`
+---
+
+### 📩 Email-to-Ticket Feature
+
+This project includes a simulated **email-to-ticket integration**.
+
+🔧 The webhook endpoint is:
+
+```
+POST /api/email-webhook
+```
+
+🧪 It accepts JSON payloads with:
+
+```json
+{
+  "from": "user@example.com",
+  "subject": "Ticket Subject",
+  "text": "Ticket Description"
+}
+```
+
+📝 For setup instructions and example usage, see the [backend README](./backend/README.md#📩-email-to-ticket-feature).
 
 ---

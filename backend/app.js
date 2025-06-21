@@ -4,6 +4,7 @@ import healthCheckRouter from "./src/routes/healthCheck.route.js";
 import ticketRoutes from "./src/routes/tickets.route.js";
 import userRoutes from "./src/routes/users.route.js";
 import replyRoutes from "./src/routes/replies.routes.js";
+import emailWebhooksRoutes from "./src/routes/emailWebhooks.route.js";
 import { ApiResponse } from "./src/utils/ApiResponse.js";
 import cors from "cors";
 
@@ -23,6 +24,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/tickets", ticketRoutes);
 app.use("/api/replyTickets", replyRoutes);
+app.use("/api/email-webhook", emailWebhooksRoutes);
 
 // Global error handler
 app.use((err, req, res, next) => {

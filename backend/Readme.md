@@ -173,3 +173,53 @@ Backend will run on: `http://localhost:8080`
 ```
 
 > Ensures there's always a default STAFF/admin user in the system.
+
+Sure! Here's a **simplified version** of the Email-to-Ticket feature for your README file:
+
+---
+
+### 📩 Email-to-Ticket Feature (Mock Setup for Assignment)
+
+This project includes a mock feature where a support ticket can be created from an email.
+
+#### 🔁 How It Works
+
+1. A user sends an email (for example: to `support@example.com`).
+2. A mock API endpoint receives this email as a POST request.
+3. The backend reads the email sender, subject, and body.
+4. It creates a ticket in the system with that info.
+
+---
+
+### 🔧 How to Test It (Manually)
+
+You can simulate an incoming email using Postman or cURL.
+
+#### ✅ Endpoint:
+
+```
+POST http://localhost:8080/api/email-webhook
+```
+
+#### 📨 Sample JSON body:
+
+```json
+{
+  "from": "jatin@example.com",
+  "subject": "Issue with login",
+  "text": "I cannot log in to my account. Please help!"
+}
+```
+
+#### 💡 What Happens:
+
+- If the user doesn’t exist, they are created.
+- A new ticket is added using the email's subject and body.
+
+---
+
+### 🚀 Note:
+
+This is just a **mock setup for the assignment** — no actual email service is connected yet.
+
+---
