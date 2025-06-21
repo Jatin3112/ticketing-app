@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE `tickets` MODIFY `status` VARCHAR(191) NOT NULL DEFAULT 'OPEN';
