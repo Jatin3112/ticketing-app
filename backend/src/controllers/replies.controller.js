@@ -23,7 +23,6 @@ export const addReply = async (req, res, next) => {
       data: {
         content,
         ticketsId: ticketId,
-        userId: req.user.id,
       },
     });
 
